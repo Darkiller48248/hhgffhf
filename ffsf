@@ -222,11 +222,8 @@ function library:Window(title)
 
 
 		btn.MouseButton1Click:Connect(function()
-        for i,v in pairs(game.CoreGui:GetDescendants()) do
- if v.Name == "ScreenGui" then
-  v:Destroy()
- end
-end
+		local ui = instance.new("ScreenGUI",CoreGui)
+ui:Destroy()
 		end)
 
 		local frame = Frame_5
